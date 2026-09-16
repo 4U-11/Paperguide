@@ -1,105 +1,94 @@
 import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-lg font-bold text-white">
-              P
+    <div className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
+      <SiteHeader />
+
+      <main>
+        <section className="overflow-hidden bg-black px-6 pb-0 pt-20 text-center text-white sm:pt-28">
+          <div className="mx-auto max-w-4xl">
+            <p className="text-sm font-medium tracking-[0.22em] text-[#a1a1a6]">
+              PAPERGUIDE
+            </p>
+
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.04] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
+              把论文读懂。
+              <br />
+              把复现做出来。
+            </h1>
+
+            <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-[#a1a1a6] sm:text-xl">
+              从原文、公式到代码和实验，建立一条清晰、可追溯的科研复现路径。
+            </p>
+
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href="/papers"
+                className="rounded-full bg-[#0071e3] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#0077ed]"
+              >
+                进入论文库
+              </Link>
+
+              <Link
+                href="/manual"
+                className="rounded-full border border-[#0071e3] px-6 py-3 text-sm font-medium text-[#2997ff] transition hover:bg-[#0071e3]/10"
+              >
+                查看复现手册
+              </Link>
             </div>
-
-            <div>
-              <p className="text-lg font-semibold">PaperGuide</p>
-              <p className="text-xs text-slate-500">
-                科研论文复现指导平台
-              </p>
-            </div>
-              </div>
-            <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
-               <Link href="/papers" className="hover:text-blue-600">
-            论文库
-               </Link>
-
-           <Link href="/upload" className="hover:text-blue-600">
-             上传论文
-           </Link>
-
-            <Link href="/manual" className="hover:text-blue-600">
-              复现手册
-            </Link>
-          </nav>
-          <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
-            阶段 1 · 前端原型
-          </span>
-        </div>
-      </header>
-
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="max-w-3xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-600">
-            从论文阅读到实验复现
-          </p>
-
-          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
-            把论文读懂，
-            <br />
-            把复现做出来。
-          </h1>
-
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            PaperGuide 帮助你整理论文、理解研究方法，并一步一步完成科研复现。
-          </p>
-
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/papers"
-              className="rounded-lg bg-blue-600 px-5 py-3 text-center font-medium text-white transition hover:bg-blue-700"
-            >
-              开始探索
-            </Link>
-
-            <Link
-              href="/manual"
-              className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-center font-medium text-slate-700 transition hover:bg-slate-100"
-            >
-              查看复现手册
-            </Link>
           </div>
-        </div>
 
-        <div id="workflow" className="mt-20 grid gap-5 md:grid-cols-3">
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <p className="text-sm font-semibold text-blue-600">01</p>
-            <h2 className="mt-4 text-xl font-semibold">整理论文</h2>
-            <p className="mt-3 leading-7 text-slate-600">
-              提取论文标题、章节、公式、图表和关键实验信息。
-            </p>
-          </article>
+          <div className="relative mx-auto mt-20 h-64 max-w-5xl sm:h-80">
+            <div className="absolute left-1/2 top-8 h-48 w-[88%] -translate-x-1/2 rounded-[32px] border border-white/30 bg-gradient-to-br from-[#d7d7dc] via-[#51545b] to-[#e4e5e8] opacity-80 shadow-[0_0_70px_rgba(255,255,255,.22)] sm:h-64 sm:rounded-[44px]" />
+            <div className="absolute left-1/2 top-20 h-36 w-[62%] -translate-x-1/2 rounded-[24px] border border-white/20 bg-gradient-to-r from-[#1d1d1f] via-[#4c5360] to-[#1d1d1f] shadow-[0_18px_80px_rgba(0,113,227,.35)] sm:top-28 sm:h-48 sm:rounded-[32px]" />
+            <div className="absolute left-1/2 top-32 h-2 w-28 -translate-x-1/2 rounded-full bg-white/40 sm:top-40" />
+          </div>
+        </section>
 
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <p className="text-sm font-semibold text-blue-600">02</p>
-            <h2 className="mt-4 text-xl font-semibold">理解方法</h2>
-            <p className="mt-3 leading-7 text-slate-600">
-              将研究问题、核心方法、变量和假设组织成清晰的知识结构。
-            </p>
-          </article>
+        <section className="px-6 py-24 sm:py-32">
+          <div className="mx-auto max-w-6xl">
+            <p className="text-sm font-medium text-[#6e6e73]">一个更清晰的工作流</p>
 
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <p className="text-sm font-semibold text-blue-600">03</p>
-            <h2 className="mt-4 text-xl font-semibold">开始复现</h2>
-            <p className="mt-3 leading-7 text-slate-600">
-              根据实验配置和复现步骤，逐项记录自己的进度与问题。
-            </p>
-          </article>
-        </div>
-      </section>
+            <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              让复杂论文，变成可以一步步完成的事情。
+            </h2>
 
-      <section id="about" className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-slate-500">
-          PaperGuide · 面向控制、自动化与机器人方向的论文复现工作台
-        </div>
-      </section>
-    </main>
+            <div className="mt-14 grid gap-5 md:grid-cols-3">
+              <article className="rounded-[28px] bg-white p-8 ring-1 ring-black/[.06]">
+                <p className="text-sm font-medium text-[#0071e3]">01</p>
+                <h3 className="mt-12 text-2xl font-semibold tracking-tight">整理论文</h3>
+                <p className="mt-4 leading-7 text-[#6e6e73]">
+                  提取标题、章节、公式、图表和关键实验信息，形成可检索的论文结构。
+                </p>
+              </article>
+
+              <article className="rounded-[28px] bg-white p-8 ring-1 ring-black/[.06]">
+                <p className="text-sm font-medium text-[#0071e3]">02</p>
+                <h3 className="mt-12 text-2xl font-semibold tracking-tight">理解方法</h3>
+                <p className="mt-4 leading-7 text-[#6e6e73]">
+                  把研究问题、核心方法、变量和假设组织成一条清晰的解释链。
+                </p>
+              </article>
+
+              <article className="rounded-[28px] bg-white p-8 ring-1 ring-black/[.06]">
+                <p className="text-sm font-medium text-[#0071e3]">03</p>
+                <h3 className="mt-12 text-2xl font-semibold tracking-tight">开始复现</h3>
+                <p className="mt-4 leading-7 text-[#6e6e73]">
+                  对照实验设置和评价指标，记录每一步进度、证据和仍待解决的问题。
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <footer className="border-t border-black/[.08] bg-white px-6 py-10">
+          <div className="mx-auto max-w-6xl text-sm text-[#6e6e73]">
+            PaperGuide · 面向控制、自动化与机器人方向的论文复现工作台
+          </div>
+        </footer>
+      </main>
+    </div>
   );
 }

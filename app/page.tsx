@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
@@ -14,8 +15,16 @@ export default function Home() {
                 科研论文复现指导平台
               </p>
             </div>
-          </div>
+              </div>
+            <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+               <Link href="/papers" className="hover:text-blue-600">
+            论文库
+               </Link>
 
+           <Link href="/upload" className="hover:text-blue-600">
+             上传论文
+           </Link>
+          </nav>
           <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
             阶段 1 · 前端原型
           </span>
@@ -39,12 +48,12 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#workflow"
+            <Link
+              href="/papers"
               className="rounded-lg bg-blue-600 px-5 py-3 text-center font-medium text-white transition hover:bg-blue-700"
             >
               开始探索
-            </a>
+            </Link>
 
             <a
               href="#about"

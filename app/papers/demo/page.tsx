@@ -1,13 +1,15 @@
+import Link from "next/link";
+
 export default function PaperDetailPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <section className="mx-auto max-w-6xl px-6 py-12">
-        <a
+        <Link
           href="/papers"
           className="text-sm font-medium text-blue-600 hover:text-blue-800"
         >
           ← 返回论文库
-        </a>
+        </Link>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_300px]">
           <div>
@@ -85,6 +87,13 @@ export default function PaperDetailPage() {
             <div className="mt-6 h-2 rounded-full bg-slate-100">
               <div className="h-2 w-[68%] rounded-full bg-blue-600" />
             </div>
+
+            <Link
+              href="/manual"
+              className="mt-6 block rounded-lg bg-blue-600 px-4 py-3 text-center text-sm font-medium text-white transition hover:bg-blue-700"
+            >
+              打开复现手册
+            </Link>
           </aside>
         </div>
       </section>

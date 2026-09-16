@@ -1,13 +1,15 @@
+import Link from "next/link";
+
 export default function UploadPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <section className="mx-auto max-w-4xl px-6 py-12">
-        <a
+        <Link
           href="/papers"
           className="text-sm font-medium text-blue-600 hover:text-blue-800"
         >
           ← 返回论文库
-        </a>
+        </Link>
 
         <div className="mt-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">

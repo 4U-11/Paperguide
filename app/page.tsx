@@ -24,6 +24,10 @@ export default function Home() {
            <Link href="/upload" className="hover:text-blue-600">
              上传论文
            </Link>
+
+            <Link href="/manual" className="hover:text-blue-600">
+              复现手册
+            </Link>
           </nav>
           <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
             阶段 1 · 前端原型
@@ -55,12 +59,12 @@ export default function Home() {
               开始探索
             </Link>
 
-            <a
-              href="#about"
+            <Link
+              href="/manual"
               className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-center font-medium text-slate-700 transition hover:bg-slate-100"
             >
-              了解平台
-            </a>
+              查看复现手册
+            </Link>
           </div>
         </div>
 

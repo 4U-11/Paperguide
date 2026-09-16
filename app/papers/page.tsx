@@ -24,12 +24,12 @@ export default function PapersPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <section className="mx-auto max-w-5xl px-6 py-12">
-        <a
+        <Link
           href="/"
           className="text-sm font-medium text-blue-600 hover:text-blue-800"
         >
           ← 返回首页
-        </a>
+        </Link>
 
         <div className="mt-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
@@ -43,6 +43,13 @@ export default function PapersPage() {
           <p className="mt-4 text-slate-600">
             整理正在阅读、分析和复现的科研论文。
           </p>
+
+          <Link
+            href="/upload"
+            className="mt-5 inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
+          >
+            上传新的论文
+          </Link>
         </div>
 
         <div className="mt-10 grid gap-4">

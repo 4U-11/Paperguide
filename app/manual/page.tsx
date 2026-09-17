@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
+import ActionButton from "@/components/ActionButton";
 
 const steps = [
   {
@@ -49,8 +49,6 @@ const steps = [
 export default function ManualPage() {
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
-      <SiteHeader />
-
       <main>
         <section className="mx-auto max-w-6xl px-6 py-20">
         <Link
@@ -143,12 +141,9 @@ export default function ManualPage() {
               提醒：目前的进度和内容是静态示例，后续连接数据库后才会保存真实记录。
             </div>
 
-            <Link
-              href="/papers/demo"
-              className="mt-6 block rounded-full bg-[#0071e3] px-4 py-3 text-center text-sm font-medium text-white transition hover:bg-[#0077ed]"
-            >
+            <ActionButton href="/papers/demo" className="mt-6">
               返回论文详情
-            </Link>
+            </ActionButton>
           </aside>
         </div>
         </section>
